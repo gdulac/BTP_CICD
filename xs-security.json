@@ -1,0 +1,29 @@
+{
+  "xsappname": "fiori_cmt",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    }
+  ],
+  "authorities":["$ACCEPT_GRANTED_AUTHORITIES"],
+  "oauth2-configuration": {
+                    "token-validity": 900, 
+                    "redirect-uris": [
+                      "https://8f32f40dtrial-dev-s-america-logali-g-space-dev-s-fiori-31f2333e.cfapps.us10-001.hana.ondemand.com",
+                      "https://8f32f40dtrial-qua-s-america-logali-g-space-qua-s-fiori-6d2b123e.cfapps.us10-001.hana.ondemand.com",
+                      "https://8f32f40dtrial-prd-s-america-logali-g-space-pro-s-fiori-ceeb6e53.cfapps.us10-001.hana.ondemand.com"
+                    ]
+  }
+}
